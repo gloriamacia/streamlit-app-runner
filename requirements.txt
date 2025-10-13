@@ -3,4 +3,3 @@ py3Dmol
 stmol
 biotite
 requests
-ipython_genutils
