@@ -7,7 +7,13 @@ build:
 run:
   pre-run:
     - pip3 install --no-cache-dir -r requirements.txt
-  command: python3 -m streamlit run app.py --server.address=0.0.0.0 --server.port=8501 --server.headless=true
+  command: streamlit run app.py --server.address=0.0.0.0 --server.port=8501 --server.headless=true --browser.serverAddress="0.0.0.0" --server.enableCORS=false --server.enableXsrfProtection=false
   network:
     port: 8501
     env: APP_RUNNER
+  env:
+    - name: STREAMLIT_SERVER_PORT
+      value: "8501"
+    - name: STREAMLIT_SERVER_ADDRESS
+      value: "0.0.0.0"
+
