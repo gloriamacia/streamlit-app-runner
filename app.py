@@ -2,6 +2,14 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 
+# Add these configuration settings at the very top
+st.set_page_config(
+    page_title="Uber Pickups",
+    layout="wide",
+    initial_sidebar_state="expanded"
+)
+
+# Your existing code remains the same
 st.title('Uber pickups in NYC')
 
 DATE_COLUMN = 'date/time'
